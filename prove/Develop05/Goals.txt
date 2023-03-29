@@ -1,0 +1,4 @@
+0
+Dance, Learn to dance, 10, False, False,
+Play Chess, Watch videos, 20, False, True,
+Clean up, Make my bed at morning., 15, False, False, 3, 0, 50
