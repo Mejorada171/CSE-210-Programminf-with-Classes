@@ -28,7 +28,7 @@ class Order {
     public string GetPackingLabel() {
         string label = "";
         foreach (Product product in products) {
-            label += $"{product.GetName()} (ID: {product.GetId()})\n";
+            label += $"{product.GetQuantity()}. {product.GetName()} (ID: {product.GetId()})\n";
         }
         return label;
     }
