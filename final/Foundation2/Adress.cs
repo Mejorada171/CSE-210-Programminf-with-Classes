@@ -1,21 +1,21 @@
 class Address {
-    private string street;
-    private string city;
-    private string state;
-    private string country;
+    private string _street;
+    private string _city;
+    private string _state;
+    private string _country;
 
     public Address(string street, string city, string state, string country) {
-        this.street = street;
-        this.city = city;
-        this.state = state;
-        this.country = country;
+        this._street = street;
+        this._city = city;
+        this._state = state;
+        this._country = country;
     }
 
     public bool IsInUSA() {
-        return country.Equals("USA");
+        return _country.Equals("USA");
     }
 
     public string GetAddressString() {
-        return $"{street}\n{city}, {state} {country}";
+        return $"{_street}\n{_city}, {_state} {_country}";
     }
 }

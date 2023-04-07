@@ -1,31 +1,31 @@
 using System;
 
 class Product {
-    private string name;
-    private int id;
-    private decimal price;
-    private int quantity;
+    private string _name;
+    private int _id;
+    private decimal _price;
+    private int _quantity;
 
     public Product(string name, int id, decimal price, int quantity) {
-        this.name = name;
-        this.id = id;
-        this.price = price;
-        this.quantity = quantity;
+        this._name = name;
+        this._id = id;
+        this._price = price;
+        this._quantity = quantity;
     }
 
     public decimal GetTotalPrice() {
-        return price * quantity;
+        return _price * _quantity;
     }
 
     public string GetName() {
-        return name;
+        return _name;
     }
 
     public int GetId() {
-        return id;
+        return _id;
     }
 
     public int GetQuantity() {
-        return quantity;
+        return _quantity;
     }
 }

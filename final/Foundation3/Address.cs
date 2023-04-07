@@ -1,20 +1,20 @@
 using System;
 
 class Address {
-    private string street;
-    private string city;
-    private string state;
-    private string country;
+    private string _street;
+    private string _city;
+    private string _state;
+    private string _country;
 
     public Address(string street, string city, string state, string country) {
-        this.street = street;
-        this.city = city;
-        this.state = state;
-        this.country = country;
+        this._street = street;
+        this._city = city;
+        this._state = state;
+        this._country = country;
     }
 
     public override string ToString() {
-        return $"{street}, {city}, {state}, {country}";
+        return $"{_street}, {_city}, {_state}, {_country}";
     }
 
     public static implicit operator string(Address v)

@@ -1,33 +1,33 @@
 class Order {
-    private Product[] products;
-    private Customer customer;
-    private decimal shippingCost;
-    private decimal totalPrice;
+    private Product[] _products;
+    private Customer _customer;
+    private decimal _shippingCost;
+    private decimal _totalPrice;
 
     public Order(Product[] products, Customer customer) {
-        this.products = products;
-        this.customer = customer;
+        this._products = products;
+        this._customer = customer;
 
-        if (customer.IsInUSA()) {
-            shippingCost = 5;
+        if (_customer.IsInUSA()) {
+            _shippingCost = 5;
         } else {
-            shippingCost = 35;
+            _shippingCost = 35;
         }
 
-        totalPrice = shippingCost;
+        _totalPrice = _shippingCost;
 
-        foreach (Product product in products) {
-            totalPrice += product.GetTotalPrice();
+        foreach (Product _product in products) {
+            _totalPrice += _product.GetTotalPrice();
         }
     }
 
     public decimal GetTotalPrice() {
-        return totalPrice;
+        return _totalPrice;
     }
 
     public string GetPackingLabel() {
         string label = "";
-        foreach (Product product in products) {
+        foreach (Product product in _products) {
             label += $"{product.GetQuantity()}. {product.GetName()} (ID: {product.GetId()})\n";
         }
         return label;
@@ -35,8 +35,8 @@ class Order {
 
     public string GetShippingLabel() {
         string label = "";
-        label += $"{customer.GetName()}\n";
-        label += $"{customer.GetAddress().GetAddressString()}\n";
+        label += $"{_customer.GetName()}\n";
+        label += $"{_customer.GetAddress().GetAddressString()}\n";
         return label;
     }
 }
